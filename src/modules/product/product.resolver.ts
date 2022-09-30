@@ -15,9 +15,8 @@ export class ProductResolver {
     return this.productService.create(createProductInput);
   }
 
-  @Query(() => [Product], { name: 'product' })
+  @Query(() => [Product], { name: 'products' })
   findAll() {
-    console.log('find all products');
     return this.productService.findAll();
   }
 
@@ -27,7 +26,7 @@ export class ProductResolver {
   }
 
   @Mutation(() => Product)
-  updateBlog(
+  updateProduct(
     @Args('updateProductInput') updateProductInput: UpdateProductInput,
   ) {
     return this.productService.update(

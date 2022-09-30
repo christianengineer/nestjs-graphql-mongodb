@@ -1,0 +1,74 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateProductInput {
+  """Product category"""
+  category: String!
+
+  """Produce description"""
+  description: String!
+
+  """Product image"""
+  image: String!
+
+  """Product name"""
+  name: String!
+
+  """Product price"""
+  price: Float!
+
+  """Product available quantity"""
+  quantityAvailable: Float!
+}
+
+type Mutation {
+  createProduct(createProductInput: CreateProductInput!): Product!
+  updateProduct(updateProductInput: UpdateProductInput!): Product!
+}
+
+type Product {
+  _id: String!
+
+  """Produce description"""
+  description: String!
+
+  """Product image"""
+  image: String!
+
+  """Product name"""
+  name: String!
+
+  """Product price"""
+  price: Float!
+
+  """Product available quantity"""
+  quantityAvailable: Float!
+}
+
+type Query {
+  product(_id: String!): Product!
+  products: [Product!]!
+}
+
+input UpdateProductInput {
+  _id: String!
+
+  """Product category"""
+  category: String
+
+  """Produce description"""
+  description: String
+
+  """Product image"""
+  image: String
+
+  """Product name"""
+  name: String
+
+  """Product price"""
+  price: Float
+
+  """Product available quantity"""
+  quantityAvailable: Float
+}

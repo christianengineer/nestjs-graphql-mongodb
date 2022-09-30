@@ -47,7 +47,7 @@ export class ProductService {
   }
 
   update(id: string, updateProductInput: UpdateProductInput) {
-    return `This action updates a #${id} product`;
+    return `This action updates a #${id} product with ${updateProductInput}`;
   }
 
   remove(id: number) {
